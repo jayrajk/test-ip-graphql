@@ -1,0 +1,19 @@
+type Location {
+  range: [Int]
+  country: String
+  region: String
+  eu: String
+  timezone: String
+  city: String
+  ll: [Float]
+  metro: Float
+  area: Float
+}
+
+input LocationWhereInput {
+  ipAddress: String!
+}
+
+type Query {
+  getLocation(where: LocationWhereInput!): Location
+}
